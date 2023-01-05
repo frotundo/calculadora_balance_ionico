@@ -59,19 +59,25 @@ const btn_clean = document.querySelector('.btn-borrar')
 
 btn_calc.addEventListener('click', calc)
 function calc() {
-    suma_cat.value =((parseFloat(input_ca.value)*pe_ca)+(parseFloat(input_k.value)*pe_k)+(parseFloat(input_mg.value)*pe_mg)+(parseFloat(input_na.value)*pe_na)+(parseFloat(input_al.value)*pe_al)+(parseFloat(input_b.value)*pe_b)+(parseFloat(input_cd.value)*pe_cd)+(parseFloat(input_cu.value)*pe_cu)+(parseFloat(input_fe.value)*pe_fe)+(parseFloat(input_mn.value)*pe_mn));
+    let catplus;
+    suma_cat.value =((parseFloat(input_ca.value)/pe_ca)+(parseFloat(input_k.value)/pe_k)+(parseFloat(input_mg.value)/pe_mg)+(parseFloat(input_na.value)/pe_na)+(parseFloat(input_al.value)/pe_al)+(parseFloat(input_b.value)/pe_b)+(parseFloat(input_cd.value)/pe_cd)+(parseFloat(input_cu.value)/pe_cu)+(parseFloat(input_fe.value)/pe_fe)+(parseFloat(input_mn.value)/pe_mn));
+    
+    catplus =suma_cat.value
 
     ce_cal_cat.value = suma_cat.value*100;
 
     div_ce_cat.value = ce_cal_cat.value/ce.value;
 
-    suma_ani.value = ((parseFloat(input_cl.value)*pe_cl)+(parseFloat(input_co3.value)*pe_co3)+(parseFloat(input_hco3.value)*pe_hco3)+(parseFloat(input_no2.value)*pe_no2)+(parseFloat(input_no3.value)*pe_no3)+(parseFloat(input_so4.value)*pe_so4)+(parseFloat(input_f.value)*pe_f))
+    suma_ani.value = ((parseFloat(input_cl.value)/pe_cl)+(parseFloat(input_co3.value)/pe_co3)+(parseFloat(input_hco3.value)/pe_hco3)+(parseFloat(input_no2.value)/pe_no2)+(parseFloat(input_no3.value)/pe_no3)+(parseFloat(input_so4.value)/pe_so4)+(parseFloat(input_f.value)/pe_f))
     
     ce_cal_ani.value = suma_ani.value*100;
 
     div_ce_ani.value = ce_cal_ani.value/parseFloat(ce.value);
 
-    balance.value = (suma_cat.value-suma_ani.value)/(suma_cat.value-suma_ani.value)*100
+    balance.value = (((parseFloat(suma_cat.value)-parseFloat(suma_ani.value))/(parseFloat(suma_cat.value)+parseFloat(suma_ani.value)))*100)
+
+    console.log(parseFloat(catplus).toFixed(4))
+    console.log(suma_ani.value)
 
     resultados.classList.remove('inactive');
 }
