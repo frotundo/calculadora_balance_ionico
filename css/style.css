@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+header {
+    height: 100px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+}
+img {
+    margin-top: 20px;
+    margin-left: 40px;
+    height:60px;
+}
+
+
+.main {
+    margin: 0 5%;
+    padding: 30px 5% 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+    min-height: calc(100vh - 100px);
+}
+.inactive {
+    display: none;
+    
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin: 20px 0 20px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.8rem;
+    margin: 15px 0 5px;
+}
+
+/*  {
+
+} */
+
+.cationes-contain, .aniones-contain {
+    font-size: 1.4rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+    grid-auto-rows: minmax(1fr, auto);
+    
+}
+/* .info_sample, .cationes-contain, .aniones-contain, .resultados_cationes, .resultados_aniones {
+    display: flex; 
+    flex-direction: column;
+} */
+.div {
+    display: flex;
+    justify-content: space-around;
+}
+
+.info_sample, .resultados_cationes, .resultados_aniones {
+    font-size: 1.4rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0px;
+    grid-auto-rows: minmax(1fr, auto);
+}
+
+input {
+    width: 120px;
+}
+
+label, input, h1, h2, h3 {
+    color: #515151;
+}
+.btn-contain {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.balance_content {
+    font-size: 1.4rem;
+}
+button {
+    width: 150px;
+    padding:8px;
+    color: white;
+    background: #0c7cbf;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+button:hover {
+    background: #acc835;
+    color: white;
+}
