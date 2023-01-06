@@ -132,9 +132,23 @@ function calc() {
       
       for (let valor of lista_input) {
         valor.classList.remove('verif');
+        if (valor.value.includes(',')){
+          valor.value = valor.value.replace(',','.');
+        }
       }
 
-      catplus =((parseFloat(input_ca.value)/pe_ca)+(parseFloat(input_k.value)/pe_k)+(parseFloat(input_mg.value)/pe_mg)+(parseFloat(input_na.value)/pe_na)+(parseFloat(input_al.value)/pe_al)+(parseFloat(input_b.value)/pe_b)+(parseFloat(input_cd.value)/pe_cd)+(parseFloat(input_cu.value)/pe_cu)+(parseFloat(input_fe.value)/pe_fe)+(parseFloat(input_mn.value)/pe_mn));
+      catplus =(
+        (parseFloat(input_ca.value)/pe_ca)+
+        (parseFloat(input_k.value)/pe_k)+
+        (parseFloat(input_mg.value)/pe_mg)+
+        (parseFloat(input_na.value)/pe_na)+
+        (parseFloat(input_al.value)/pe_al)+
+        (parseFloat(input_b.value)/pe_b)+
+        (parseFloat(input_cd.value)/pe_cd)+
+        (parseFloat(input_cu.value)/pe_cu)+
+        (parseFloat(input_fe.value)/pe_fe)+
+        (parseFloat(input_mn.value)/pe_mn)
+        );
     
       suma_cat.value = catplus.toFixed(2)
 
@@ -142,7 +156,15 @@ function calc() {
 
       div_ce_cat.value = (ce_cal_cat.value/parseFloat(ce.value)).toFixed(2);
 
-      aniplus = ((parseFloat(input_cl.value)/pe_cl)+(parseFloat(input_co3.value)/pe_co3)+(parseFloat(input_hco3.value)/pe_hco3)+(parseFloat(input_no2.value)/pe_no2)+(parseFloat(input_no3.value)/pe_no3)+(parseFloat(input_so4.value)/pe_so4)+(parseFloat(input_f.value)/pe_f))
+      aniplus = (
+        (parseFloat(input_cl.value)/pe_cl)+
+        (parseFloat(input_co3.value)/pe_co3)+
+        (parseFloat(input_hco3.value)/pe_hco3)+
+        (parseFloat(input_no2.value)/pe_no2)+
+        (parseFloat(input_no3.value)/pe_no3)+
+        (parseFloat(input_so4.value)/pe_so4)+
+        (parseFloat(input_f.value)/pe_f)
+        )
       
       suma_ani.value = aniplus.toFixed(2)
 
@@ -151,8 +173,6 @@ function calc() {
       div_ce_ani.value = (ce_cal_ani.value/parseFloat(ce.value)).toFixed(2);
 
       balance.value = (((parseFloat(catplus)-parseFloat(aniplus))/(parseFloat(catplus)+parseFloat(aniplus)))*100).toFixed(2)
-      console.log(parseFloat(catplus).toFixed(4))
-      console.log(suma_ani.value)
 
       error_info.classList.add('inactive')
       resultados.classList.remove('inactive');
