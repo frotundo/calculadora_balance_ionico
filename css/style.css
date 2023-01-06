@@ -103,7 +103,7 @@ button {
     box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
     border-radius: 5px;
     margin-top: 10px;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
 }
 
 button:hover {
@@ -124,4 +124,23 @@ button:hover {
 
 .verif {
     border: 2px red solid;
+}
+
+.msg {
+    position: absolute;
+    width: 50%;
+    margin-left: 15%;
+    bottom:-200px;
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: rgb(205, 248, 180);
+    color: #2c6100;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 1.4rem;
+}
+
+#msg {
+    font-size: 2rem;
 }

@@ -51,11 +51,13 @@ let div_ce_cat = document.querySelector('.div_ce_cat');
 let suma_ani = document.querySelector('.suma-ani');
 let ce_cal_ani = document.querySelector('.ce_cal_ani');
 let div_ce_ani = document.querySelector('.div_ce_ani');
-let balance = document.querySelector('.balance')
+let balance = document.querySelector('.balance');
 
 // -------------- variables de botones -------------
-const btn_calc = document.querySelector('.btn-calcular')
-const btn_clean = document.querySelector('.btn-borrar')
+const btn_calc = document.querySelector('.btn-calcular');
+const btn_clean = document.querySelector('.btn-borrar');
+
+const btn_save = document.querySelector(".save");
 
 lista_input = [
   input_ca,
@@ -247,11 +249,23 @@ function clean () {
 }
 
 const scriptURL = 'https://script.google.com/macros/s/AKfycbxHBDn-AamvPyojy52Fy1xYpehfBRjST6MtQX2JPzfNTEGo21BXk06qjZu4hIKWLccN/exec'
-  const form = document.forms['submit-to-google-sheet']
+const form = document.forms['submit-to-google-sheet']
+const msg = document.querySelector(".msg");
 
-  form.addEventListener('submit', e => {
-    e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => console.log('Success!', response))
-      .catch(error => console.error('Error!', error.message))
-  })
+form.addEventListener('submit', e => {
+  e.preventDefault()
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    .then(response => {
+      msg.classList.remove('inactive');
+      msg.innerHTML = "Información enviada con exito.";
+      setTimeout(function(){
+        msg.classList.add('inactive');
+        clean()
+      },5000)
+    })
+    .catch(error => console.error('Error!', error.message))
+})
+
+
+
+
