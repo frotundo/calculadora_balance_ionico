@@ -48,7 +48,6 @@ const resultados = document.querySelector('.resultados');
 let suma_cat = document.querySelector('.suma-cat');
 let ce_cal_cat = document.querySelector('.ce_cal_cat');
 let div_ce_cat = document.querySelector('.div_ce_cat');
-let valor_div_ce_cat = div_ce_cat.value
 let suma_ani = document.querySelector('.suma-ani');
 let ce_cal_ani = document.querySelector('.ce_cal_ani');
 let div_ce_ani = document.querySelector('.div_ce_ani');
@@ -82,7 +81,44 @@ function calc() {
     let catplus;
     let aniplus;
 
-    if (input_ca.value!=='' && input_k.value!==''&& input_mg.value!=='' && input_na.value!=='' && input_al.value!=='' && input_b.value!=='' && input_cd.value!=='' && input_cu.value!=='' && input_fe.value!=='' && input_mn.value!=='' && input_cl.value!=='' && input_co3.value!=='' && input_hco3.value!=='' && input_no2.value!=='' && input_no3.value!=='' && input_so4.value!=='' && input_f.value!=='' && ce.value!=='' && typeof(parseFloat(input_ca.value))==='number' && typeof(parseFloat(input_k.value))==='number' && typeof(parseFloat(input_mg.value))==='number' && typeof(parseFloat(input_na.value))==='number' && typeof(parseFloat(input_al.value))==='number' && typeof(parseFloat(input_b.value))==='number' && typeof(parseFloat(input_cd.value))==='number' && typeof(parseFloat(input_cu.value))==='number' && typeof(parseFloat(input_fe.value))==='number' && typeof(parseFloat(input_mn.value))==='number' && typeof(parseFloat(input_cl.value))==='number' && typeof(parseFloat(input_co3.value))==='number' && typeof(parseFloat(input_hco3.value))==='number' && typeof(parseFloat(input_no2.value))==='number' && typeof(parseFloat(input_no3.value))==='number' && typeof(parseFloat(input_so4.value))==='number' && typeof(parseFloat(input_f.value))==='number' && typeof(parseFloat(ce.value))==='number'){
+    if (
+      input_ca.value!=='' && 
+      input_k.value!==''&& 
+      input_mg.value!=='' && 
+      input_na.value!=='' && 
+      input_al.value!=='' && 
+      input_b.value!=='' && 
+      input_cd.value!=='' && 
+      input_cu.value!=='' && 
+      input_fe.value!=='' && 
+      input_mn.value!=='' && 
+      input_cl.value!=='' && 
+      input_co3.value!=='' && 
+      input_hco3.value!=='' && 
+      input_no2.value!=='' && 
+      input_no3.value!=='' && 
+      input_so4.value!=='' && 
+      input_f.value!=='' && 
+      ce.value!=='' && 
+      typeof(parseFloat(input_ca.value))==='number' && 
+      typeof(parseFloat(input_k.value))==='number' && 
+      typeof(parseFloat(input_mg.value))==='number' && 
+      typeof(parseFloat(input_na.value))==='number' && 
+      typeof(parseFloat(input_al.value))==='number' && 
+      typeof(parseFloat(input_b.value))==='number' && 
+      typeof(parseFloat(input_cd.value))==='number' && 
+      typeof(parseFloat(input_cu.value))==='number' && 
+      typeof(parseFloat(input_fe.value))==='number' && 
+      typeof(parseFloat(input_mn.value))==='number' && 
+      typeof(parseFloat(input_cl.value))==='number' && 
+      typeof(parseFloat(input_co3.value))==='number' && 
+      typeof(parseFloat(input_hco3.value))==='number' && 
+      typeof(parseFloat(input_no2.value))==='number' && 
+      typeof(parseFloat(input_no3.value))==='number' && 
+      typeof(parseFloat(input_so4.value))==='number' && 
+      typeof(parseFloat(input_f.value))==='number' && 
+      typeof(parseFloat(ce.value))==='number'
+      ){
       
       catplus =((parseFloat(input_ca.value)/pe_ca)+(parseFloat(input_k.value)/pe_k)+(parseFloat(input_mg.value)/pe_mg)+(parseFloat(input_na.value)/pe_na)+(parseFloat(input_al.value)/pe_al)+(parseFloat(input_b.value)/pe_b)+(parseFloat(input_cd.value)/pe_cd)+(parseFloat(input_cu.value)/pe_cu)+(parseFloat(input_fe.value)/pe_fe)+(parseFloat(input_mn.value)/pe_mn));
     
@@ -106,6 +142,14 @@ function calc() {
 
       error_info.classList.add('inactive')
       resultados.classList.remove('inactive');
+
+      if (validate(div_ce_cat)===false) {
+        div_ce_cat.classList.add('verif');
+      }
+
+      if (validate(div_ce_ani)===false) {
+        div_ce_ani.classList.add('verif');
+      }
 
     } else {
       error_info.classList.remove('inactive')
