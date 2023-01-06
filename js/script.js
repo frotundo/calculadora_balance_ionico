@@ -130,6 +130,10 @@ function calc() {
       parseFloat(ce.value)>=0
       ){
       
+      for (let valor of lista_input) {
+        valor.classList.remove('verif');
+      }
+
       catplus =((parseFloat(input_ca.value)/pe_ca)+(parseFloat(input_k.value)/pe_k)+(parseFloat(input_mg.value)/pe_mg)+(parseFloat(input_na.value)/pe_na)+(parseFloat(input_al.value)/pe_al)+(parseFloat(input_b.value)/pe_b)+(parseFloat(input_cd.value)/pe_cd)+(parseFloat(input_cu.value)/pe_cu)+(parseFloat(input_fe.value)/pe_fe)+(parseFloat(input_mn.value)/pe_mn));
     
       suma_cat.value = catplus.toFixed(2)
@@ -216,6 +220,10 @@ function clean () {
 
     error_info.classList.add('inactive');
     resultados.classList.add('inactive');
+
+    for (let valor of lista_input) {
+      valor.classList.remove('verif');
+    }
 }
 
 const scriptURL = 'https://script.google.com/macros/s/AKfycbxHBDn-AamvPyojy52Fy1xYpehfBRjST6MtQX2JPzfNTEGo21BXk06qjZu4hIKWLccN/exec'
