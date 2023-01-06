@@ -21,7 +21,7 @@ img {
 
 .main {
     margin: 0 5%;
-    padding: 30px 5% 0;
+    padding: 30px 5% 50px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
     min-height: calc(100vh - 100px);
 }
@@ -47,10 +47,6 @@ h3 {
     margin: 15px 0 5px;
 }
 
-/*  {
-
-} */
-
 .cationes-contain, .aniones-contain {
     font-size: 1.4rem;
     display: grid;
@@ -59,10 +55,7 @@ h3 {
     grid-auto-rows: minmax(1fr, auto);
     
 }
-/* .info_sample, .cationes-contain, .aniones-contain, .resultados_cationes, .resultados_aniones {
-    display: flex; 
-    flex-direction: column;
-} */
+
 .div {
     display: flex;
     justify-content: space-around;
@@ -103,7 +96,7 @@ button {
     box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
     border-radius: 5px;
     margin-top: 10px;
-    margin-bottom: 90px;
+    margin-bottom: 40px;
 }
 
 button:hover {
@@ -127,10 +120,10 @@ button:hover {
 }
 
 .msg {
-    position: absolute;
-    width: 50%;
-    margin-left: 15%;
-    bottom:-200px;
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 20px;
+    margin-bottom: 10px;
     font-size: 2rem;
     font-weight: bold;
     background-color: rgb(205, 248, 180);
@@ -138,9 +131,4 @@ button:hover {
     text-align: center;
     padding: 5px;
     border-radius: 5px;
-    font-size: 1.4rem;
-}
-
-#msg {
-    font-size: 2rem;
 }

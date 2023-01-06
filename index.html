@@ -150,14 +150,19 @@
                     <input type="text" class="balance" name="Balance_ionico(%)" required>
                 </div>
             </div> 
+
+            <p id="msg" class="msg inactive">Información enviada con exito.</p>
+
             <div class="btn-contain">
                 <button type="button" class="btn-calcular" onclick="calc()">CALCULAR</button>
-                <button type="submit" class="save">GUARDAR</button>
+                <button type="submit" href="#msg" class="save">GUARDAR</button>
                 <button type="button" class="btn-borrar">BORRAR</button>
             </div>
+            
+
         </form>
 
-        <span id="msg" class="msg inactive"></span>
+        
     </div>
     
     <script src="./js/script.js"></script>
