@@ -57,23 +57,33 @@ let balance = document.querySelector('.balance')
 const btn_calc = document.querySelector('.btn-calcular')
 const btn_clean = document.querySelector('.btn-borrar')
 
+lista_input = [
+  input_ca,
+  input_k,
+  input_mg, 
+  input_na, 
+  input_al, 
+  input_b, 
+  input_cd, 
+  input_cu, 
+  input_fe, 
+  input_mn, 
+  input_cl, 
+  input_co3, 
+  input_hco3, 
+  input_no2, 
+  input_no3, 
+  input_so4, 
+  input_f, 
+  ce
+]
 
-function validate(valor) {
+function validate_range(valor) {
   return parseFloat(valor.value)>=0.9 && parseFloat(valor.value)<=1.1
 }
 
-
-function verif_cat() {
-  if (validate(div_ce_cat)===false) {
-    div_ce_cat.classList.add('verif');
-  }
-}
-
-function verif_ani() {
-    if (validate(div_ce_ani)===false) {
-      div_ce_ani.classList.add('verif');
-    }
-
+function validate_value_type(valor) {
+  return parseFloat(valor.value)>=0
 }
 
 btn_calc.addEventListener('click', calc)
@@ -100,24 +110,24 @@ function calc() {
       input_so4.value!=='' && 
       input_f.value!=='' && 
       ce.value!=='' && 
-      typeof(parseFloat(input_ca.value))==='number' && 
-      typeof(parseFloat(input_k.value))==='number' && 
-      typeof(parseFloat(input_mg.value))==='number' && 
-      typeof(parseFloat(input_na.value))==='number' && 
-      typeof(parseFloat(input_al.value))==='number' && 
-      typeof(parseFloat(input_b.value))==='number' && 
-      typeof(parseFloat(input_cd.value))==='number' && 
-      typeof(parseFloat(input_cu.value))==='number' && 
-      typeof(parseFloat(input_fe.value))==='number' && 
-      typeof(parseFloat(input_mn.value))==='number' && 
-      typeof(parseFloat(input_cl.value))==='number' && 
-      typeof(parseFloat(input_co3.value))==='number' && 
-      typeof(parseFloat(input_hco3.value))==='number' && 
-      typeof(parseFloat(input_no2.value))==='number' && 
-      typeof(parseFloat(input_no3.value))==='number' && 
-      typeof(parseFloat(input_so4.value))==='number' && 
-      typeof(parseFloat(input_f.value))==='number' && 
-      typeof(parseFloat(ce.value))==='number'
+      parseFloat(input_ca.value)>=0 &&
+      parseFloat(input_k.value)>=0 &&
+      parseFloat(input_mg.value)>=0 &&
+      parseFloat(input_na.value)>=0 &&
+      parseFloat(input_al.value)>=0 &&
+      parseFloat(input_b.value)>=0 &&
+      parseFloat(input_cd.value)>=0 &&
+      parseFloat(input_cu.value)>=0 &&
+      parseFloat(input_fe.value)>=0 &&
+      parseFloat(input_mn.value)>=0 &&
+      parseFloat(input_cl.value)>=0 &&
+      parseFloat(input_co3.value)>=0 &&
+      parseFloat(input_hco3.value)>=0 &&
+      parseFloat(input_no2.value)>=0 &&
+      parseFloat(input_no3.value)>=0 &&
+      parseFloat(input_so4.value)>=0 &&
+      parseFloat(input_f.value)>=0 &&
+      parseFloat(ce.value)>=0
       ){
       
       catplus =((parseFloat(input_ca.value)/pe_ca)+(parseFloat(input_k.value)/pe_k)+(parseFloat(input_mg.value)/pe_mg)+(parseFloat(input_na.value)/pe_na)+(parseFloat(input_al.value)/pe_al)+(parseFloat(input_b.value)/pe_b)+(parseFloat(input_cd.value)/pe_cd)+(parseFloat(input_cu.value)/pe_cu)+(parseFloat(input_fe.value)/pe_fe)+(parseFloat(input_mn.value)/pe_mn));
@@ -143,15 +153,22 @@ function calc() {
       error_info.classList.add('inactive')
       resultados.classList.remove('inactive');
 
-      if (validate(div_ce_cat)===false) {
+      if (validate_range(div_ce_cat)===false) {
         div_ce_cat.classList.add('verif');
       }
 
-      if (validate(div_ce_ani)===false) {
+      if (validate_range(div_ce_ani)===false) {
         div_ce_ani.classList.add('verif');
       }
 
     } else {
+
+      for (let valor of lista_input) {
+        if (validate_value_type(valor)===false) {
+          valor.classList.add('verif');
+        }
+      }
+
       error_info.classList.remove('inactive')
     }
 
