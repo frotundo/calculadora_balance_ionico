@@ -18,91 +18,94 @@
             <div class="info_sample">
                 <div>
                     <label for="">Fecha de Muestreo</label>
-                    <input type="Date" class="fecha" name="Fecha_de_muestreo">
+                    <input type="Date" class="fecha" name="Fecha_de_muestreo" required>
                 </div>
                 <div>
                     <label for="">Código de muestra</label>
-                    <input type="text" class="codigo" name="Codigo_de_muestra">
+                    <input type="text" class="codigo" name="Codigo_de_muestra" required>
                 </div>
                 <div>
                     <label for="">CE</label>
-                    <input type="text" class="ce" name="CE">
+                    <input type="text" class="ce" name="CE" required>
                 </div>
             </div>
             <h2>Cationes</h2>
             <div class="cationes-contain">
                 <div class="div">
                     <label for="">Ca+2 (mg/L)</label>
-                    <input type="text" class="input-ca" name="Ca+2(mg/L)" value=0>
+                    <input type="text" class="input-ca" name="Ca+2(mg/L)" required>
                 </div>
                 <div class="div">
                     <label for="">K+ (mg/L)</label>
-                    <input type="text" class="input-k" name="K+(mg/L)" value=0>
+                    <input type="text" class="input-k" name="K+(mg/L)" required>
                 </div>
                 <div class="div">
                     <label for="">Mg+2 (mg/L)</label>
-                    <input type="text" class="input-mg" name="Mg+2(mg/L)" value=0>
+                    <input type="text" class="input-mg" name="Mg+2(mg/L)" required>
                 </div>
                 <div class="div">
                     <label for="">Na+ (mg/L)</label>
-                    <input type="text" class="input-na" name="Na+(mg/L)" value=0>
+                    <input type="text" class="input-na" name="Na+(mg/L)" required>
                 </div>
                 <div class="div">
                     <label for="">Al+3 (mg/L)</label>
-                    <input type="text" class="input-al" name="Al+3(mg/L)" value=0>
+                    <input type="text" class="input-al" name="Al+3(mg/L)" required>
                 </div>
                 <div class="div">
                     <label for="">B+3 (mg/L)</label>
-                    <input type="text" class="input-b" name="B+3(mg/L)" value=0>
+                    <input type="text" class="input-b" name="B+3(mg/L)" required>
                 </div>
                 <div class="div">
                     <label for="">Cd+2 (mg/L)</label>
-                    <input type="text" class="input-cd" name="Cd+2(mg/L)" value=0>
+                    <input type="text" class="input-cd" name="Cd+2(mg/L)" required>
                 </div>
                 <div class="div">
                     <label for="">Cu+2 (mg/L)</label>
-                    <input type="text" class="input-cu" name="Cu+2(mg/L)" value=0>
+                    <input type="text" class="input-cu" name="Cu+2(mg/L)" required>
                 </div>
                 <div class="div">
                     <label for="">Fe+3 (mg/L)</label>
-                    <input type="text" class="input-fe" name="Fe+3(mg/L)" value=0>
+                    <input type="text" class="input-fe" name="Fe+3(mg/L)" required>
                 </div>
                 <div class="div">
                     <label for="">Mn+4 (mg/L)</label>
-                    <input type="text" class="input-mn" name="Mn+4(mg/L)" value=0>
+                    <input type="text" class="input-mn" name="Mn+4(mg/L)" required>
                 </div>
             </div>
             <h2>Aniones</h2>
             <div class="aniones-contain" >
                 <div class="div">
                     <label for="">Cl- (mg/L)</label>
-                    <input type="text" class="input-cl" name="Cl-(mg/L)" value=0>
+                    <input type="text" class="input-cl" name="Cl-(mg/L)" required>
                 </div>
                 <div class="div">
                     <label for="">CO3-2 (mg/L)</label>
-                    <input type="text" class="input-co3" name="CO3-2(mg/L)" value=0>
+                    <input type="text" class="input-co3" name="CO3-2(mg/L)" required>
                 </div>
                 <div class="div">
                     <label for="">HCO3- (mg/L)</label>
-                    <input type="text" class="input-hco3" name="HCO3-(mg/L)" value=0>
+                    <input type="text" class="input-hco3" name="HCO3-(mg/L)" required>
                 </div>
                 <div class="div">
                     <label for="">NO2- (mg/L)</label>
-                    <input type="text" class="input-no2" name="NO2-(mg/L)" value=0>
+                    <input type="text" class="input-no2" name="NO2-(mg/L)" required>
                 </div>
                 <div class="div">
                     <label for="">NO3- (mg/L)</label>
-                    <input type="text" class="input-no3" name="NO3-(mg/L)" value=0>
+                    <input type="text" class="input-no3" name="NO3-(mg/L)" required>
                 </div>
                 <div class="div">
                     <label for="">SO4-2 (mg/L)</label>
-                    <input type="text" class="input-so4" name="SO4-2(mg/L)" value=0>
+                    <input type="text" class="input-so4" name="SO4-2(mg/L)" required>
                 </div>
                 <div class="div">
                     <label for="">F- (mg/L)</label>
-                    <input type="text" class="input-f" name="F-(mg/L)" value=0>
+                    <input type="text" class="input-f" name="F-(mg/L)" required>
                 </div>
                 
+            </div>
+            <div class="error_info inactive">
+                <p>Faltan valores o algun valor ingresado no es numerico.</p>
             </div>
             <div class="resultados inactive" >
                 <h2>Resultados</h2>
@@ -111,16 +114,16 @@
                 <div class="resultados_cationes">    
                     <div>
                         <label for="">Sumatoria (meq/L)</label>
-                        <input type="text" class="suma-cat" name="Sumatoria_Cationes(meq/L)" value=0>
+                        <input type="text" class="suma-cat" name="Sumatoria_Cationes(meq/L)" required>
                     </div>
                     <div>
                         <label for="">CE cal.</label>
                         <input type="text" class="ce_cal_cat" 
-                        name="CE_cationes_cal." value=0>
+                        name="CE_cationes_cal." required>
                     </div>
                     <div>
-                        <label for="">CE cal./CE real entre (0,9-1,1)</label>
-                        <input type="text" class="div_ce_cat" name="CE_cationes_cal./CE_real_entre_(0,9-1,1)" value=0>
+                        <label for="">CE cal./CE real entre (0.9-1.1)</label>
+                        <input type="text" class="div_ce_cat" onchange="verif_cat()" name="CE_cationes_cal./CE_real_entre_(0,9-1,1)" required>
                     </div>
                     
                 </div>
@@ -128,15 +131,15 @@
                 <div class="resultados_aniones" >
                     <div>
                         <label for="">Sumatoria (meq/L)</label>
-                        <input type="text" class="suma-ani" name="Sumatoria_aniones(meq/L)" value=0>
+                        <input type="text" class="suma-ani" name="Sumatoria_aniones(meq/L)" required>
                     </div>
                     <div>
                         <label for="">CE cal.</label>
-                        <input type="text" class="ce_cal_ani" name="CE_aniones_cal." value=0>
+                        <input type="text" class="ce_cal_ani" name="CE_aniones_cal." required>
                     </div>
                     <div>
-                        <label for="">CE cal./CE real entre (0,9-1,1)</label>
-                        <input type="text" class="div_ce_ani" name="CE_aniones_cal./CE_real_entre_(0,9-1,1)" value=0>
+                        <label for="">CE cal./CE real entre (0.9-1.1)</label>
+                        <input type="text" class="div_ce_ani" onchange="verif_ani()" name="CE_aniones_cal./CE_real_entre_(0,9-1,1)" required>
                     </div>
                     
                 </div>
@@ -144,7 +147,7 @@
                 <div class="balance_content">
                     
                     <label for="">Balance Iónico (%)</label>
-                    <input type="text" class="balance" name="Balance_ionico(%)" value=0>
+                    <input type="text" class="balance" name="Balance_ionico(%)" required>
                 </div>
             </div> 
             <div class="btn-contain">

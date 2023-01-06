@@ -110,3 +110,18 @@ button:hover {
     background: #acc835;
     color: white;
 }
+
+.error_info p {
+    margin: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: rgb(252, 156, 156);
+    color: #610000;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.verif {
+    border: 2px red solid;
+}
